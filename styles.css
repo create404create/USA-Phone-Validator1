@@ -1,0 +1,138 @@
+/* Custom Styles */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+}
+
+.upload-section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.border-dashed {
+    border: 3px dashed #007bff;
+}
+
+.upload-area {
+    cursor: pointer;
+    padding: 40px 20px;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    transform: translateY(-5px);
+}
+
+.upload-area.drag-over {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-color: #0056b3;
+}
+
+.progress {
+    border-radius: 10px;
+}
+
+.state-badge {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 20px;
+}
+
+.btn-lg {
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+    background-color: #343a40;
+    color: white;
+    z-index: 10;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.badge-success {
+    background-color: #28a745;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Custom scrollbar */
+.table-responsive::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .upload-area {
+        padding: 20px 10px;
+    }
+}
+
+/* Animation for processing */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.processing {
+    animation: pulse 1.5s infinite;
+}
+
+/* Badge styles */
+.badge {
+    font-weight: 500;
+}
+
+/* State cards styling */
+.state-card {
+    transition: transform 0.2s;
+}
+
+.state-card:hover {
+    transform: scale(1.02);
+}
