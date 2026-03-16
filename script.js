@@ -54,8 +54,6 @@ function handleFile(file) {
         return;
     }
     
-    // REMOVED: File size validation based on maxNumbers
-    
     // Update file info
     document.getElementById('fileName').textContent = file.name;
     document.getElementById('fileSize').textContent = formatFileSize(file.size);
@@ -97,11 +95,9 @@ function processFile() {
     // Get user options
     const removePlusOne = document.getElementById('removePlusOne').checked;
     const filterInvalid = document.getElementById('filterInvalid').checked;
-    // REMOVED: maxNumbers variable
     
     // Split content into lines
     const lines = fileContent.split('\n');
-    // REMOVED: Math.min with maxNumbers - use all lines
     totalNumbers = lines.length;
     
     // Process in chunks to prevent blocking
@@ -112,7 +108,6 @@ function processFile() {
 function processInChunks(lines, removePlusOne, filterInvalid) {
     const chunkSize = 1000;
     let currentIndex = 0;
-    // REMOVED: maxNumbers parameter
     processedResults = {
         valid: [],
         invalid: [],
@@ -120,7 +115,6 @@ function processInChunks(lines, removePlusOne, filterInvalid) {
     };
     
     function processChunk() {
-        // REMOVED: Math.min with totalNumbers - use all lines
         const endIndex = Math.min(currentIndex + chunkSize, totalNumbers);
         
         for (let i = currentIndex; i < endIndex; i++) {
